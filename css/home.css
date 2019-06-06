@@ -1,0 +1,113 @@
+
+
+h1{
+  color: #182559;
+  text-align: center;
+  text-shadow: 2px;
+}
+
+h2{
+  color: #182559;
+}
+
+h3{
+  text-align: center;
+  color:#666666;
+}
+
+h4{
+    color: #182559;
+}
+td{
+  font-size: 18px;
+}
+
+.intro{
+  border-radius: 15px;
+  border: 5px 5px 5px 5px;
+  border-style: solid;
+  border-color: #9eace2;
+  margin: 10px 0 10px 0;
+  height: 40px;
+
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+p{
+  color: #333435;
+}
+
+body{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #9eace2;
+}
+#head{
+  margin-top: 20px;
+  text-align: center;
+}
+a.head{
+  background-color: #4356a0;
+  padding: 5px 15px 5px 15px;
+  margin: 50px 5px 30px 0;
+  height: 40px;
+  font-size: 20px;
+  text-decoration:none;
+}
+
+input{
+  text-align: center;
+}
+a.head:link{
+  color: #FFFFFF;
+}
+
+a.head:hover{
+    color: #000000;
+}
+
+a.head:checked{
+  color:#000000;
+}
+
+a.head:active{
+  color:#FFFFFF;
+}
+
+a.cont:link{
+  color: #5e1818;
+}
+a.cont:hover{
+  color: #5e1818;
+}
+
+a.cont:checked{
+  color: #5e1818;
+}
+
+#page-wrapper{
+  background-color: #FFFFFF;
+  margin: 40px 0 40px 0;
+  padding: 10px 20px 50px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  font-family: "맑은 고딕";
+}
+
+#main-section{
+  float: left;
+  padding-left: 50px;
+  width: 500px;
+}
+
+#main-aside{
+  float: right;
+  padding-right: 50px;
+  width: 200px;
+}
+
+#content{
+  overflow: hidden;
+}
