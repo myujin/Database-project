@@ -17,7 +17,7 @@
       if($same_check_num){
         echo "<script>alert('같은 아이디의 사용자가 있습니다.'); history.go(-1);</script>";
       } else{
-          $insert_query="INSERT INTO buyer(ID, PW, name) VALUES ($_T[id], $_T[pwd], $_T[name])";
+          $insert_query="INSERT INTO buyer(ID, PW, name) VALUES ('$id', '$pwd', '$name')";
           $result=mysqli_query($connect, $insert_query);
           if($result === false){
             echo mysqli_error($connect);
@@ -35,12 +35,12 @@
       if($same_check_num){
         echo "<script>alert('같은 아이디의 사용자가 있습니다.'); history.go(-1);</script>";
       } else{
-          $insert_query="INSERT INTO seller(ID, PW, name) VALUES ($id, $pwd, $name)";
+          $insert_query="INSERT INTO seller(ID, PW, name) VALUES ('$id', '$pwd', '$name')";
           $result=mysqli_query($connect, $insert_query);
           if($result === false){
             echo mysqli_error($connect);
           } else{
-          echo "<script>alert('구매자 회원가입이 완료되었습니다.'); location.href='./login_form.html';</script>";
+          echo "<script>alert('판매자 회원가입이 완료되었습니다.'); location.href='./login_form.html';</script>";
           }
       }
 
