@@ -22,7 +22,9 @@
     if ($num) {
       if ($row['PW'] == $pwd) {
         echo "<form name='logged' action='./home.php' method='post'><input type='hidden' name='login_success' value='1'>";
-        echo "<input type='hidden' name='login_id' value='$id'></form>";
+        echo "<input type='hidden' name='login_id' value='$id'>";
+        echo "<input type='hidden' name='login_pwd' value='$pwd'>";
+        echo "<input type='hidden' name='login_check_info' value='$check_info'></form>>";
 
 
         if ($check_info=='buyer' && is_null($row['address'])){
