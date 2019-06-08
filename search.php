@@ -85,6 +85,7 @@
 							<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
 							<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
 							<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
+							<input type='hidden' name='item_num' value=<?=$row['item_num']?>>
 							<CENTER><button type="submit">구매</button>
 						</form></td>
 			      <td><?=$row['product_name']?></td>
