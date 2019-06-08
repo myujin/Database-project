@@ -1,22 +1,33 @@
+<!--
+change_seller_info.html
+역할: 변경할 판매자 정보를 입력받는다.
+-->
+
 <h2>개인정보 변경</h2>
 변경할 내용을 입력하세요
 <form action="./change_user_info.php" name="change_user_info" method='post'>
 
+    <!--변경 전 아이디, 비밀번호, 구매자인지 판매자인지 확인하는 변수(login_check_info)를 다음페이지로 전달-->
     <input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
 		<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
 		<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
 
     <h4>아이디: <?=$_POST['login_id']?></h4>
 
+    <!--변경할 닉네임 입력-->
     <h4>닉네임</h4>
     <input type="text" name="name_new" value=<?=$_POST['name']?>>
 
+    <!--변경할 비밀번호 입력-->
     <h4>비밀번호</h4>
 		<input type="password" name="PW_new1" >
+
+    <!--변경한 비밀번호 확인-->
     <h4>비밀번호 다시 입력</h4>
     <input type="password" name="PW_new2" >
+
+    <!--변경 정보 submit-->
     <br></br>
     <input type="submit" value="변경하기">
 
-		    <!--<p>가나다라마바사<p>-->
 </form>
