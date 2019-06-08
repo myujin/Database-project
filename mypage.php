@@ -12,29 +12,44 @@
 <div id="page-wrapper">
 	<div id="head">
 		<nav>
-		    	<a class="head" href="home.php">홈페이지</a>
-		      <a class="head" href="item.php">아이템 목록</a>
-		      <a class="head" href="mypage.php">마이페이지</a>
+			<form class="head" action="./home.php" name='home' method="post">
+				<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
+				<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
+				<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
+				<button type="submit">홈페이지</button>
+			</form>
+			<form class="head" action="./item.php" name='item' method="post">
+				<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
+				<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
+				<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
+					<button type="submit">아이템 목록</button>
+			</form>
+			<form class="head" action="./mypage.php" name='mypage' method="post">
+				<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
+				<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
+				<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
+				<button type="submit">마이페이지</button>
+			</form>
 		</nav>
 	</div>
+
 	<h1>수공예 장터 iDBus</h1>
 	<div id="content">
 		<section id="main-section">
 
 <br></br>
-    <h2>개인정보 변경</h2>
-    변경할 내용을 입력하세요
-      <form action="./change.php">
-      <h4>아이디</h4>
-			<input type="text" name="ID">
-      <h4>비밀번호</h4>
-			<p>현재 비밀번호 <input type="text" name="PW"></p>
-			<p>변경할 비밀번호 <input type="text" name="PW"></p>
-      <h4>배송 주소</h4>
-			<input type="text" name="address">
-			<br></br>
-      <input type="submit" value="변경하기">
+      <form action="./check_right_pwd.php" name="change_user_info" method='post'>
+				<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
+				<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
+				<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
 
+				<h2>개인정보 변경</h2>
+		    비밀번호를 입력하세요
+	      <h4>비밀번호</h4>
+				<p>현재 비밀번호 <input type="password" name="PW_old"></p>
+
+				<br>
+	      <input type="submit" value="변경하기">
 
 		    <!--<p>가나다라마바사<p>-->
       </form>
