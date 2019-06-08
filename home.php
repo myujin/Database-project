@@ -46,10 +46,16 @@
 		    </table>
 <br></br>
 
-        <form action="./search.php">
-          검색할 내용을 입력하세요
-          <br> <input type="text" name="email" > <input type="submit" value="검색 ">
+				<form action="./search.php" name="do_search" method='post'>
+					<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
+					<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
+					<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
+					<input type='hidden' name='category' value="all">
 
+          검색할 내용을 입력하세요
+
+					<br> <input type="text" name='search' > <input type="submit" value="검색 ">
+				</form>
 		    <h2>이번 주 인기 상품</h2>
 		    <!--<p>가나다라마바사<p>-->
 		    <ul style="list-style-type:square;">
