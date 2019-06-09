@@ -1,4 +1,7 @@
-
+<?
+/***item.php***/
+/***역할: (추가) ***/
+?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <html>
 <head>
@@ -10,6 +13,11 @@
 </head>
 <body>
 <div id="page-wrapper">
+
+	<?
+	/*홈페이지, 아이템페이지, 마이페이지 이동 버튼 구현 및 다음 페이지로 정보를 전달*/
+	/*이동 정보: 로그인 된 아이디, 비밀번호, 구매자인지 판매자인지 확인하는 변수(login_check_info)*/
+	?>
 	<div id="head">
 		<nav>
 			<form class="head" action="./home.php" name='home' method="post">

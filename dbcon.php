@@ -1,4 +1,8 @@
 <?
+/***dbcon.php***/
+/***역할: db연결 ***/
+?>
+<?
 $db_host = "localhost";
 $db_user = "root";
 $db_passwd = "0000";
