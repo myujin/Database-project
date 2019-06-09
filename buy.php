@@ -62,12 +62,14 @@
   	<form action="./update_purchase_table.php" method="post">
 			<?
 			/*다음 페이지로 정보 이동*/
-			/*이동 정보: 로그인 된 아이디, 비밀번호, 구매자인지 판매자인지 확인하는 변수(login_check_info), db로 부터 받은 선택한 상품의 재고수*/
+			/*이동 정보: 로그인 된 아이디, 비밀번호, 구매자인지 판매자인지 확인하는 변수(login_check_info),*/
+			/*					db로 부터 받은 선택한 상품의 재고수, 선택한 상품의 고유번호*/
 			?>
 			<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
 			<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
 			<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
       <input type='hidden' name='stock' value=<?=$row['stock']?>>
+			<input type='hidden' name='item_num' value=<?=$row['item_num']?>>
 
 			<?
 			/*구매수량 입력*/
