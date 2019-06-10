@@ -121,7 +121,6 @@
 			      <td><?=$row['product_name']?></td>
 			      <td><?=$row['category']?></td>
 			      <td><?=$row['seller_ID']?></td>
-			    </tr>
 			<?
 			  }
 			?>
