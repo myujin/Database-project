@@ -97,9 +97,9 @@
 
 				//db의 상품 목록에서 검색 조건에 맞는 상품들을 가져오는 질의문
 				if($category=="all"){
-					$query = "SELECT * FROM item WHERE product_name LIKE '%$search%' ORDER BY score DESC LIMIT 10";
+					$query = "SELECT * FROM item WHERE product_name LIKE '%$search%' AND seller_ID IS NOT NULL ORDER BY score DESC LIMIT 10";
 				} else{
-					$query = "SELECT * FROM item WHERE category='$category' AND product_name LIKE '%$search%' ORDER BY score DESC LIMIT 10";
+					$query = "SELECT * FROM item WHERE category='$category' AND product_name LIKE '%$search%' AND seller_ID IS NOT NULL ORDER BY score DESC LIMIT 10";
 				}
 
 			  $result = mysqli_query($connect, $query);
@@ -126,7 +126,7 @@
 			  }
 			?>
 
-		</div>	
+		</div>
 </div>
 </body>
 </html>

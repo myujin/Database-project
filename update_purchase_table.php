@@ -11,6 +11,10 @@ include './dbcon.php';//db연결
 $order_num=$_POST['order_num'];
 $item_num=$_POST['item_num'];
 $stock=$_POST['stock'];
+$option=$_POST['option'];
+$login_id=$_POST['login_id'];
+$login_pwd=$_POST['login_pwd'];
+$login_check_info=$_POST['login_check_info'];
 
 /*판매자로 로그인 한 상태에서 구매할 경우*/
 if($_POST['login_check_info']=='seller'){
@@ -29,7 +33,10 @@ else{
   /*상품의 구매 개수가 재고수보다 적고 1보다 큰 경우*/
   else{
     /*구매목록을 작성하는 질의문*/
-    
+    $purchase_query = "INSERT INTO purchase(purchase_date, option_num, order_num, item_num, buyer_ID) VALUES (NOW(), $option, $order_num, $item_num, '$login_id')";
+
+    ?><?=$purchase_query?><?
+    $purchase_result = mysqli_query($connect, $purchase_query);
 
     /*상품의 재고수를 변경하는 질의문*/
     $renew_stock_query = "UPDATE item SET stock = stock - $order_num WHERE item_num = $item_num";
@@ -43,11 +50,11 @@ else{
     /*재고수가 변경 완료된 경우 다음페이지로 아이디, 비밀번호,*/
     /*구매자인지 판매자인지 확인하는 변수(login_check_info) 전달 및 구매 완료 알리기.*/
     else{
-      echo "<form name='buy_done' action='./home.php' method='post'>";
-      echo "<input type='hidden' name='login_id' value='$_POST['login_id']'>";
-      echo "<input type='hidden' name='login_pwd' value='$_POST['login_pwd']'>";
-      echo "<input type='hidden' name='login_check_info' value='$_POST['login_check_info']'></form>>";
-      echo "<script>alert('구매가 완료되었습니다.'); document.logged.submit();</script>";
+      echo "<form name='logged' action='./home.php' method='post'>";
+      echo "<input type='hidden' name='login_id' value='$login_id'>";
+      echo "<input type='hidden' name='login_pwd' value='$login_pwd'>";
+      echo "<input type='hidden' name='login_check_info' value='$login_check_info'></form>>";
+      echo "<script>alert('상품이 구매되었습니다.'); document.logged.submit();</script>";
     }
   }
 }

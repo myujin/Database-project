@@ -73,21 +73,7 @@
 					<br> <input type="text" name='search' > <input type="submit" value="검색 ">
 			</form>
 
-			<?
-			///변경
-			?>
-		  <h2>이번 주 인기 상품</h2>
-			<ul style="list-style-type:square;">
-				<li>마카롱</li>
-		   	<li>연유 초콜릿</li>
-			</ul>
 
-			<h2>자주 묻는 질문</h2>
-		   <ul style="list-style-type:square;"height="50%">
-		   	<li>배송날짜 확인</li>
-		    <li>교환 및 환불 신청</li>
-		   </ul>
-			<h2>image link</h2>
 		</section>
 
 		<?
