@@ -1,0 +1,28 @@
+<h2>상품 정보 변경</h2>
+
+<form  action="./renew_item.php" name="renew_item" method="post">
+  <input type="hidden" name='product_num' value=<?=$_POST['product_num']?>>
+  <input type="hidden" name='product_name' value=<?=$_POST['product_name']?>>
+  <input type="hidden" name='item_num' value=<?=$_POST['item_num']?>>
+  <input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
+  <input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
+  <input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
+
+<h4>상품명: <?=$_POST['product_name']?></h4>
+
+<h4>상품 가격</h4>
+<input type="text" name="price_new">
+
+<!--변경할 비밀번호 입력-->
+<h4>상품 재고수</h4>
+<input type="password" name="stock_new" >
+
+<!--변경한 비밀번호 확인-->
+<h4>비밀번호 입력</h4>
+<input type="password" name="PW_new" >
+
+<!--변경 정보 submit-->
+<br></br>
+<input type="submit" value="변경하기">
+
+</form>

@@ -62,6 +62,18 @@
 				<td><label>내용</label></td><td><textarea name="b_content" rows="10" cols="30"></textarea></td>
 			</tr>
 			<tr>
+				<td><label>카테고리</label></td><td><input type="text" name="category" class="box"/></td>
+			</tr>
+			<tr>
+				<td><label>재고 수</label></td><td><input type="text" name="stocks" class="box"/></td>
+			</tr>
+			<tr>
+				<td><label>가격</label></td><td><input type="text" name="price" class="box"/></td>
+			</tr>
+			<tr>
+				<td><label>점수</label></td><td><input type="text" name="score" class="box"/></td>
+			</tr>
+			<tr>
 				<td><label>글쓴이</label></td>
 			<?
 				if ( $_POST['login_check_info'] ) {
@@ -95,7 +107,7 @@
 
 		include './dbcon.php';
 
-		$query = "SELECT * from board order by id desc limit 5";
+		$query = "SELECT * from purchase order by id desc limit 5";
 
 		$result = mysqli_query($connect, $query);
 

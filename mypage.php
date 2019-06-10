@@ -131,7 +131,7 @@
 							<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
 							<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
 							<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
-							<input type='hidden' name='item_num' value=<?=$row['item_num']?>>
+							<input type='hidden' name='item_num' value=<?=$_POST['item_num']?>>
 							<CENTER><button type="submit">후기 작성</button>
 						</form></td>
 				  </tr>
@@ -172,21 +172,25 @@
 							?>
 					    <td><form action="remove_item.php" method="post">
 								<?/*다음 페이지로 로그인 된 아이디, 비밀번호, 구매자인지 판매자인지 확인하는 변수(login_check_info) 전달*/?>
+								<input type='hidden' name='product_num' value=<?=$_POST['product_name']?>>
 								<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
 								<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
 								<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
-								<input type='hidden' name='item_num' value=<?=$row['item_num']?>>
+								<input type='hidden' name='item_num' value=<?=$_POST['item_num']?>>
+
 								<CENTER><button type="submit">상품 내리기</button>
 							</form></td>
 							<?
 							/*상품 판매를 수정할 수 있는 버튼 생성*/
 							?>
-							<td><form action="renew_item.php" method="post">
+							<td><form action="renew_item.html" method="post">
 								<?/*다음 페이지로 로그인 된 아이디, 비밀번호, 구매자인지 판매자인지 확인하는 변수(login_check_info) 전달*/?>
+								<input type='hidden' name='product_num' value=<?=$_POST['product_name']?>>
 								<input type='hidden' name='login_id' value=<?=$_POST['login_id']?>>
 								<input type='hidden' name='login_pwd' value=<?=$_POST['login_pwd']?>>
 								<input type='hidden' name='login_check_info' value=<?=$_POST['login_check_info']?>>
-								<input type='hidden' name='item_num' value=<?=$row['item_num']?>>
+								<input type='hidden' name='item_num' value=<?=$_POST['item_num']?>>
+
 								<CENTER><button type="submit">상품 수정</button>
 							</form></td>
 					  </tr>
