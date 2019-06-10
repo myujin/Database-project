@@ -85,24 +85,24 @@
 			?>
       <CENTER>옵션
       <br>
-      <input type="radio" name="option" value="opton0" checked="checked">옵션없음
+      <input type="radio" name="option" value=0 checked="checked">옵션없음
       <?
       if($row['option1']){
       ?>
       	<br>
-      	<input type="radio" name="option" value="opton1"><?=$row['option1']?>
+      	<input type="radio" name="option" value=1><?=$row['option1']?>
       <?
       }
       if($row['option2']){
       ?>
       	<br>
-      	<input type="radio" name="option" value="opton2"><?=$row['option2']?>
+      	<input type="radio" name="option" value=2><?=$row['option2']?>
       <?
       }
       if($row['option3']){
       ?>
       	<br>
-      	<input type="radio" name="option" value="opton3"><?=$row['option3']?>
+      	<input type="radio" name="option" value=3><?=$row['option3']?>
       <?
       }
       ?>
